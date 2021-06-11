@@ -1,0 +1,26 @@
+{
+  "name": "implement-page-obj-model",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmolShingane/Implement-page-obj-model.git"
+  },
+  "author": "Amol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmolShingane/Implement-page-obj-model/issues"
+  },
+  "homepage": "https://github.com/AmolShingane/Implement-page-obj-model#readme",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "cypress": "^7.5.0",
+    "cypress-cucumber-preprocessor": "^4.1.2"
+  }
+}
