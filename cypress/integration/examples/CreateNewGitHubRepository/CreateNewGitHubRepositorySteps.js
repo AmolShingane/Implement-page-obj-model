@@ -35,3 +35,12 @@ Then('I log out', () => {
 When('I send get request to check server',(dataTable)=>{
 apiCalls.getApiCall(dataTable)
 })
+
+When ('I send {string} request with {string} to approve claim',(method,endPoint)=>{
+    apiCalls.postApiCall(method,endPoint)
+    })
+
+Then('Verify {string} and {string} of responce',(message,statusCode)=>{
+    apiCalls.verifyResponce(message,statusCode)
+})
+

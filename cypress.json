@@ -1,6 +1,6 @@
 {
     "testFiles": "**/*.feature",
-    "baseUrl":"https://github.com"
+    "baseUrl":"https://tenant1-stage.discoverdollar.org"
 
     
     
