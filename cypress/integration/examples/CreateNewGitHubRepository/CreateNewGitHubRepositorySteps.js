@@ -10,7 +10,7 @@ const logInPage = new LogInPage()
 const homePage = new HomePage()
 const createNewRepo = new CreateNewRepoPage()
 const newRepoPage = new NewRepoPage()
-const apiCalls=new ApiCalls()
+const apiCalls = new ApiCalls()
 
 Given('Visit git hub log in page', () => {
     cy.visit('https://github.com/login')
@@ -32,15 +32,28 @@ Then('I log out', () => {
     newRepoPage.clickOnLogOut()
 })
 
-When('I send get request to check server',(dataTable)=>{
-apiCalls.getApiCall(dataTable)
+When('I send get request to check server', (dataTable) => {
+    apiCalls.getApiCall(dataTable)
+})
+//////////////////////////////////////----------------------////////////////////////////////////////
+When('I send {string} request to {string} with body {string} to approve claim', (method, endPoint, claimID) => {
+    apiCalls.postApiCall(method, endPoint, claimID)
 })
 
-When ('I send {string} request with {string} to approve claim',(method,endPoint)=>{
-    apiCalls.postApiCall(method,endPoint)
-    })
-
-Then('Verify {string} and {string} of responce',(message,statusCode)=>{
-    apiCalls.verifyResponce(message,statusCode)
+When('I send {string} request to {string} with body {string} to reject claim', (method, endPoint, claimID) => {
+    apiCalls.postApiCall(method, endPoint, claimID)
 })
+
+When('I send {string} request to {string} with body {string} to send claim approvel request', (method, endPoint, claimID) => {
+    apiCalls.postApiCall(method, endPoint, claimID)
+})
+When('I send {string} request to {string} for get all user to allocat claim', (method,endPoint) => {
+    apiCalls.getApiCall(method,endPoint)
+})
+
+
+Then('Verify {string} and {string} of responce', (message, statusCode) => {
+    apiCalls.verifyResponce(message, statusCode)
+})
+
 
